@@ -20,24 +20,27 @@ bomb = 0
 
 while row < 3:
   while column < 3:
-    print("here")
-    value = grid [row][col]
-    print(row)
-    print(column)
-    print(value)
+    #print("here")
+    value = grid [row][column]
+  #  print(row)
+   # print(column)
+    #print(value)
     if value == -1:
-      bombs = bombs + 1
+      bomb = bomb + 1
       column = column + 1
-      print(column)
+     # print(column)
     else:
       column = column + 1
   row = row + 1
   column = 0
-  
-middle_grid = grid[1][1]
+#print("the number of bombs are", bomb)
 
-if middle_grid == bombs:
+middle_grid = grid[1][1]
+print("The middle value is", middle_grid)
+if middle_grid == bomb:
+ # print("Valid")
   validation = "Valid"
 else:
+#  print("Invalid, check interior block")
   validation = "Invalid; check the middle block"
 print (validate(grid))
