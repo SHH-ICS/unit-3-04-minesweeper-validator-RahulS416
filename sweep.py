@@ -13,31 +13,31 @@ grid = [
   [1,3,-1],
   [0,2,-1]
 ]
+#row is x, column is y, bomb is z
+x = [0]
+y = [0]
+z = [0]
 
-row = 0
-column = 0
-bomb = 0
-
-while row < 3:
-  while column < 3:
+for x in range [3]:
+  for y in range [3]:
     #print("here")
-    value = grid [row][column]
-  #  print(row)
-   # print(column)
+    value = grid [x][y]
+  #  print(x)
+   # print(y)
     #print(value)
     if value == -1:
-      bomb = bomb + 1
-      column = column + 1
+      z = z + 1
+      y = y + 1
      # print(column)
     else:
-      column = column + 1
-  row = row + 1
-  column = 0
-#print("the number of bombs are", bomb)
+      y = y + 1
+  x = x + 1
+  y = 0
+#print("the number of bombs are", z)
 
 middle_grid = grid[1][1]
 print("The middle value is", middle_grid)
-if middle_grid == bomb:
+if middle_grid == z:
  # print("Valid")
   validation = "Valid"
 else:
