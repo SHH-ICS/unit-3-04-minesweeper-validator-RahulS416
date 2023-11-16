@@ -14,16 +14,16 @@ grid = [
   [0,2,-1]
 ]
 #row is x, column is y, bomb is z
-x = [0]
-y = [0]
-z = [0]
+x = 0
+y = 0
+z = 0
 
-for x in range (3):
-  for y in range (3):
+for row in range (3):
+  for column in range (3):
     #print("here")
-    value = grid [x][y]
-  #  print(x)
-   # print(y)
+    value = grid [row][column]
+  #  print(row)
+   # print(column)
     #print(value)
     if value == -1:
       z = z + 1
